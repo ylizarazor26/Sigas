@@ -23,10 +23,11 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/","/login", "/css/**", "/js/**", "/registro").permitAll()
+                        .requestMatchers("/api/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/login") // Nombre de tu vista Thymeleaf (login.html)
+                        .loginPage("/login")
                         .defaultSuccessUrl("/index", true)
                         .permitAll()
                 )

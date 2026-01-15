@@ -1,4 +1,5 @@
 package com.sigas.gestion.persistencia.entidades;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,13 +24,8 @@ public class Usuario {
 
     @OneToOne
     @JoinColumn(name = "empleado_cedula", referencedColumnName = "cedula")
+    @JsonIgnoreProperties("usuario")
     private Empleado empleado;
 
 
 }
-
-
-
-
-
-
