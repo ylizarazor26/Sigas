@@ -57,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.GestionApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "jwt",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
